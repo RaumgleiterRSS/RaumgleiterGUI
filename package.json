@@ -1,0 +1,19 @@
+{
+  "name": "raumgleiter_gui",
+  "version": "0.0.1",
+  "description": "Frontend for Raumgleiter RSS Reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaumgleiterRSS/RaumgleiterGUI.git"
+  },
+  "author": "Daniel Henning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RaumgleiterRSS/RaumgleiterGUI/issues"
+  },
+  "homepage": "https://github.com/RaumgleiterRSS/RaumgleiterGUI#readme"
+}
