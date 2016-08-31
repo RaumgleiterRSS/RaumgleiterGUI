@@ -1,0 +1,14 @@
+@import 'ArticleList/ArticleList';
+@import 'SourceList/SourceList';
+
+.cw {
+  display: flex;
+
+  .cw--left {
+    flex-basis: 30vw;
+  }
+
+  .cw--right {
+    flex-basis: 60vw;
+  }
+}
