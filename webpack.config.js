@@ -18,6 +18,9 @@ config = {
     },{
       test: /\.scss$/,
       loader: extractTextPlugin.extract('style', 'css!sass')
+    }, {
+      test: /\.json?$/,
+      loader: 'json'
     }]
   },
   plugins: [

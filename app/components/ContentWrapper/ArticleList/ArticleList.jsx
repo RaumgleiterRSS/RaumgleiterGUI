@@ -8,9 +8,18 @@ export default class ArticleList extends React.Component {
   }
 
   render() {
+    let articleList = this.props.data.map((item, index) => {
+      return <ArticleItem 
+        key={'ai' + index}
+        title={item.title}
+        content={item.content}
+        date={item.updated}
+      />
+    })
+
     return(
       <div className="al">
-        <ArticleItem />
+        {articleList}
       </div>
     )
   }

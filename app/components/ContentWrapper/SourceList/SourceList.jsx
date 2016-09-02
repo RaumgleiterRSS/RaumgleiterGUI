@@ -8,9 +8,20 @@ export default class SourceList extends React.Component {
   }
 
   render() {
+    let sourceItems = this.props.data.map((item, index) => {
+
+      return <SourceItem 
+        key={'si' + index}
+        title={item.title}
+        counter={item.count}
+        onSourceItemSelection={this.props.onSourceItemSelection.bind(this, item._id)}
+        setActiveArticles={this.props.setActiveArticles.bind(this, item.entries)}
+      />
+    })
+
     return(
       <div className="sl">
-        <SourceItem />
+        {sourceItems}
       </div>
     )
   }
