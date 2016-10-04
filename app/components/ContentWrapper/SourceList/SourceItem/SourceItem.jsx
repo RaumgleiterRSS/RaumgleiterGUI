@@ -12,12 +12,12 @@ export default class SourceItem extends React.Component {
 
   render() {
     return(
-      <div 
+      <div
         className="si"
         onClick={this.onSelection.bind(this)}
       >
-        <span>{this.props.title}</span>
-        <span>{this.props.counter}</span>
+        <div className="si--title">{this.props.title}</div>
+        <div className="si--counter">{this.props.counter}</div>
       </div>
     )
   }
