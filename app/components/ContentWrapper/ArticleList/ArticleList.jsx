@@ -14,6 +14,7 @@ export default class ArticleList extends React.Component {
         title={item.title}
         content={item.content}
         date={item.updated}
+        source={item.link}
       />
     })
 
