@@ -3,12 +3,15 @@
 
 .cw {
   display: flex;
+  height: 100vh;
 
   .cw--left {
     flex-basis: 30vw;
+    overflow-x: hidden;
   }
 
   .cw--right {
-    flex-basis: 60vw;
+    flex-basis: 70vw;
+    overflow-x: hidden;
   }
 }

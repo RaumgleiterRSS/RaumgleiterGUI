@@ -12,7 +12,6 @@ export default class SourceList extends React.Component {
       return <SourceItem
         key={'si' + index}
         title={item.title}
-        counterVar={item.count}
         counter={40}
         onSourceItemSelection={this.props.onSourceItemSelection.bind(this, item._id)}
         setActiveArticles={this.props.setActiveArticles.bind(this, item.entries)}

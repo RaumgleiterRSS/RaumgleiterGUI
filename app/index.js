@@ -6,5 +6,5 @@ import ContentWrapper from './components/ContentWrapper/ContentWrapper.jsx'
 
 ReactDOM.render(
   <ContentWrapper />,
-  document.getElementById('wrapper')
+  document.getElementById('entry')
 )

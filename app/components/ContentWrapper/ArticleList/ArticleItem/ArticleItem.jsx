@@ -1,29 +1,49 @@
 import React from 'react'
+import moment from 'moment'
 
 export default class ArticleItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isRead: false
+      date: null
     }
   }
 
   setRead() {
-    if (this.state.isRead == false) {
-      this.setState({isRead: true})
+    if (this.props.isRead == false) {
+      //send request to db to set article as read
+      console.log("db request to set article as read")
     }
   }
 
+  focusItem() {
+    console.log('test')
+    this.props.focusedItem()
+  }
+
+  componentWillMount() {
+    let isoDate = this.props.date
+    let humanDate = moment(isoDate).format('HH:mm - DD.MM.YYYY')
+    this.setState({date: humanDate})
+  }
+
   render() {
+    let itemClass = "ai"
+    if (this.props.isFocused == true) {
+      itemClass = "ai focused"
+    }
+
     return(
-      <div className="ai">
+      <div className={itemClass}
+        onClick={this.focusItem.bind(this)}>
         <hr />
-        <div className="ai--headline">
-          <a href={this.props.source} 
+        <div className="ai--container">
+          <a href={this.props.source}
             target="_blank"
             onClick={this.setRead.bind(this)}>
-            <span>{this.props.title} - {this.props.date}</span>
+            <div className="ai--headline">{this.props.title}</div>
           </a>
+          <div>{this.state.date}</div>
         </div>
         <div className="ai--content">
           <span>{this.props.content}</span>
