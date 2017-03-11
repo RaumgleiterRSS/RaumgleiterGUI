@@ -1,25 +1,25 @@
 <template>
-	<div id="app">
-		<PaneLeft></PaneLeft>
-		<PaneRight></PaneRight>
+	<div id="rg">
+		<SourceList></SourceList>
+		<ArticleList></ArticleList>
 	</div>
 </template>
 
 <script>
-import PaneLeft from './components/PaneLeft'
-import PaneRight from './components/PaneRight'
+import SourceList from './components/SourceList'
+import ArticleList from './components/ArticleList'
 
 export default {
-	name: 'app',
+	name: 'rg',
 	components: {
-		PaneLeft,
-		PaneRight
+		SourceList,
+		ArticleList
 	}
 }
 </script>
 
 <style>
-#app {
+#rg {
 	position: absolute;
 	top: 0;
 	left: 0;

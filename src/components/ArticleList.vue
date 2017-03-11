@@ -1,15 +1,15 @@
 <template>
-	<div class="pane--left">
+	<div class="rg--articlelist">
 		<h1>{{ msg }}</h1>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'left pane',
+	name: 'articlelist',
 	data: function () {
 		return {
-			msg: 'This is the left Pane'
+			msg: 'This is the article list'
 		}
 	}
 }
@@ -17,9 +17,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pane--left {
-	min-width: 400px;
-	max-width: 400px;
-	background: #0f0;
+.rg--articlelist {
+	width: 100%;
+	background: #f00;
 }
 </style>
