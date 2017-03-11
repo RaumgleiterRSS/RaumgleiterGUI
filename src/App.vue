@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+	<div id="app">
+		<PaneLeft></PaneLeft>
+		<PaneRight></PaneRight>
+	</div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import PaneLeft from './components/PaneLeft'
+import PaneRight from './components/PaneRight'
 
 export default {
-  name: 'app',
-  components: {
-    Hello
-  }
+	name: 'app',
+	components: {
+		PaneLeft,
+		PaneRight
+	}
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #ddd;
+	display: flex;
+	align-items: strech;
 }
 </style>
